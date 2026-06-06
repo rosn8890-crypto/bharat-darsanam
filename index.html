@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ── SEO Meta Tags ── -->
+  <title>Bharat Darsanam – Explore India, Feel India</title>
+  <meta name="description" content="Bharat Darsanam offers handcrafted travel and trek packages across India — Himalayas, Rajasthan, South India, Char Dham Yatra, and more. Contact Gajendra Singh at +91 95113 33174.">
+  <meta name="keywords"    content="India travel, trek packages, Char Dham Yatra, Himalayan trek, Rajasthan tour, Bharat Darsanam, Gajendra Singh travel">
+  <meta name="author"      content="Gajendra Singh — Bharat Darsanam">
+
+  <!-- ── Open Graph (for WhatsApp/social preview) ── -->
+  <meta property="og:title"       content="Bharat Darsanam – Explore India, Feel India">
+  <meta property="og:description" content="Handcrafted tours & treks across India. Call Gajendra Singh: +91 95113 33174">
+  <meta property="og:type"        content="website">
+
+  <!-- ── Favicon (emoji fallback) ── -->
+  <link rel="icon" href="images/logo.png">
+
+  <!-- ── Google Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Mukta:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- ── Stylesheet ── -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     SPLASH SCREEN — 3-Step Sequence
+════════════════════════════════════════ -->
+<div id="splash">
+  <div class="splash-bg"></div>
+  <div class="splash-content">
+
+    <!-- Step 1: Welcome text -->
+    <div class="splash-welcome">
+      <span class="splash-welcome-to">Welcome to</span>
+      <span class="splash-welcome-brand">Bharat <em>Darsanam</em></span>
+    </div>
+
+    <!-- Step 2: Logo clean, no rings -->
+    <div class="splash-logo-wrap">
+      <img src="images/logo.png" alt="Bharat Darsanam" class="splash-logo">
+    </div>
+
+    <!-- Step 3: Tagline — JS types letter by letter -->
+    <div class="splash-tagline" id="splashTagline"></div>
+
+    <!-- Loader bar -->
+    <div class="splash-loader">
+      <div class="splash-loader-bar"></div>
+    </div>
+
+  </div>
+</div>
+<!-- ════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">
+    <img src="images/logo.png" alt="Bharat Darsanam Logo" class="nav-logo-img">
+    <span class="nav-logo-text">Bharat <span class="nav-logo-accent">Darsanam</span></span>
+  </a>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#packages">Packages</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <!-- TODO: Replace bharatdarsanam with real Instagram username -->
+    <li><a href="https://www.instagram.com/the_bharatdarsanam?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="nav-insta">📸 Instagram</a></li>
+    <li>
+      <a href="https://wa.me/919511333174" target="_blank" class="nav-wa">
+        📲 WhatsApp
+      </a>
+    </li>
+  </ul>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+
+<!-- ════════════════════════════════════════
+     HERO — Full Screen Slider
+════════════════════════════════════════ -->
+<section id="hero">
+
+  <!-- Slides — add your own photos in images/ folder -->
+  <div class="slider">
+    <div class="slide active" style="background-image:url('images/hero1.jpg')">
+      <div class="slide-overlay"></div>
+    </div>
+    <div class="slide" style="background-image:url('images/hero2.jpg')">
+      <div class="slide-overlay"></div>
+    </div>
+    <div class="slide" style="background-image:url('images/hero3.jpg')">
+      <div class="slide-overlay"></div>
+    </div>
+    <div class="slide" style="background-image:url('images/hero4.jpg')">
+      <div class="slide-overlay"></div>
+    </div>
+  </div>
+
+  <!-- Center Content -->
+  <div class="hero-content">
+    <div class="hero-badge">✦ India's Trusted Travel Partner ✦</div>
+    <h1 class="hero-title">
+      Explore India,
+      <span>Feel India.</span>
+    </h1>
+    <p class="hero-sub">
+      From the snow-capped Himalayas to the golden deserts of Rajasthan —
+      we craft journeys that stay with you forever.
+    </p>
+    <div class="hero-btns">
+      <a href="#packages" class="btn-primary">🗺️ View Packages</a>
+      <a href="#contact"  class="btn-outline">Get Free Quote</a>
+    </div>
+  </div>
+
+  <!-- Slider Arrows -->
+  <button class="slider-arrow left"  id="sliderPrev">&#8592;</button>
+  <button class="slider-arrow right" id="sliderNext">&#8594;</button>
+
+  <!-- Slider Dots -->
+  <div class="slider-dots">
+    <span class="dot active" data-index="0"></span>
+    <span class="dot"        data-index="1"></span>
+    <span class="dot"        data-index="2"></span>
+    <span class="dot"        data-index="3"></span>
+  </div>
+
+  <!-- Stats Bar — bottom like Rajasthan Tourism -->
+  <div class="hero-stats-bar">
+    <div class="stat-item">
+      <div class="stat-num" data-target="500" data-suffix="+">500+</div>
+      <div class="stat-label">Happy Travelers</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <div class="stat-num" data-target="25" data-suffix="+">10+</div>
+      <div class="stat-label">Destinations</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <div class="stat-num" data-target="10" data-suffix="+">5+</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <div class="stat-num">4.8★</div>
+      <div class="stat-label">Avg Rating</div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ════════════════════════════════════════
+     PACKAGES
+════════════════════════════════════════ -->
+<section id="packages">
+  <div class="text-center reveal" style="margin-bottom:52px">
+    <div class="section-tag">✦ Our Tours &amp; Treks</div>
+    <h2 class="section-title">Handcrafted Travel Experiences</h2>
+    <div class="divider"></div>
+    <p class="section-sub">
+      Every package is designed with care — so you travel stress-free
+      and come back with stories.
+    </p>
+  </div>
+  
+
+  <div class="pkg-grid">
+
+    <!-- Card 1: Himalayan Trek -->
+    <div class="pkg-card reveal">
+      <div class="pkg-img pkg-himalaya">
+        <div class="pkg-img-bg"></div>
+        <div class="pkg-overlay"></div>
+        <span class="pkg-badge">🏔️ Adventure Trek</span>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-name">Himalayan Trek Expedition</div>
+        <div class="pkg-meta">
+          <span>⏱ 7 Days</span>
+          <span>👥 Group &amp; Private</span>
+        </div>
+        <p class="pkg-desc">
+          Trek through breathtaking Himalayan trails, cross high-altitude passes,
+          and experience life in remote mountain villages.
+        </p>
+        <div class="pkg-footer">
+          
+          <button class="btn-green pkg-book-btn" data-pkg="Himalayan Trek Expedition">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Rajasthan -->
+    <div class="pkg-card reveal">
+      <div class="pkg-img pkg-rajasthan">
+        <div class="pkg-img-bg"></div>
+        <div class="pkg-overlay"></div>
+        <span class="pkg-badge">🏰 Heritage Tour</span>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-name">Rajasthan Heritage Tour</div>
+        <div class="pkg-meta">
+          <span>⏱ 6 Days</span>
+          <span>👥 Group &amp; Private</span>
+        </div>
+        <p class="pkg-desc">
+          Explore royal forts, vibrant bazaars, and golden dunes of
+          Jaipur, Jodhpur, Jaisalmer, and Udaipur.
+        </p>
+        <div class="pkg-footer">
+         
+          <button class="btn-green pkg-book-btn" data-pkg="Rajasthan Heritage Tour">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: South India -->
+    <div class="pkg-card reveal">
+      <div class="pkg-img pkg-south">
+        <div class="pkg-img-bg"></div>
+        <div class="pkg-overlay"></div>
+        <span class="pkg-badge">🛕 Temple Tour</span>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-name">South India Temple Circuit</div>
+        <div class="pkg-meta">
+          <span>⏱ 8 Days</span>
+          <span>👥 Group &amp; Private</span>
+        </div>
+        <p class="pkg-desc">
+          Visit ancient Dravidian temples, serene backwaters, and lush
+          green landscapes of Tamil Nadu and Kerala.
+        </p>
+        <div class="pkg-footer">
+         
+          <button class="btn-green pkg-book-btn" data-pkg="South India Temple Circuit">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4: Char Dham -->
+    <div class="pkg-card reveal">
+      <div class="pkg-img pkg-chardham">
+        <div class="pkg-img-bg"></div>
+        <div class="pkg-overlay"></div>
+        <span class="pkg-badge">🙏 Pilgrimage</span>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-name">Char Dham Yatra</div>
+        <div class="pkg-meta">
+          <span>⏱ 12 Days</span>
+          <span>👥 Group Tour</span>
+        </div>
+        <p class="pkg-desc">
+          Complete the sacred Char Dham pilgrimage — Yamunotri, Gangotri,
+          Kedarnath, and Badrinath — with full guidance.
+        </p>
+        <div class="pkg-footer">
+         
+          <button class="btn-green pkg-book-btn" data-pkg="Char Dham Yatra">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5: Valley of Flowers -->
+    <div class="pkg-card reveal">
+      <div class="pkg-img pkg-valley">
+        <div class="pkg-img-bg"></div>
+        <div class="pkg-overlay"></div>
+        <span class="pkg-badge">🌸 Nature Trek</span>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-name">Valley of Flowers Trek</div>
+        <div class="pkg-meta">
+          <span>⏱ 6 Days</span>
+          <span>👥 Group &amp; Private</span>
+        </div>
+        <p class="pkg-desc">
+          Walk through UNESCO-listed meadows bursting with hundreds of wild
+          Himalayan flowers — a photographer's paradise.
+        </p>
+        <div class="pkg-footer">
+          
+          <button class="btn-green pkg-book-btn" data-pkg="Valley of Flowers Trek">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════ -->
+<section id="about">
+  <div class="about-grid">
+
+    <div class="about-visual reveal">
+  <img src="images/our-story.jpg" alt="Our Story" class="about-story-img">
+  <div class="about-story-overlay">
+    <div class="about-quote">
+      "Travel is the only thing you buy that makes you richer."
+    </div>
+    <div class="about-quote-author">— Bharat Darsanam Promise</div>
+  </div>
+</div>
+
+    <div class="reveal">
+      <div class="section-tag">✦ Our Story</div>
+      <h2 class="section-title">Born from a Love for India</h2>
+      <div class="divider"></div>
+      <p class="section-sub">
+        Founded and led by <strong>Gajendra Singh</strong>, Bharat Darsanam was created
+        with one belief — every Indian deserves to explore the incredible diversity
+        of their own country. From adventure treks to peaceful pilgrimages,
+        we design every journey with heart and passion.
+      </p>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🧭</div>
+          <div class="why-title">Expert Local Guides</div>
+          <div class="why-desc">Our guides are trained locals who know every trail, temple, and secret spot.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💰</div>
+          <div class="why-title">Best Price Guarantee</div>
+          <div class="why-desc">Transparent pricing with zero hidden charges. What you see is what you pay.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🛡️</div>
+          <div class="why-title">Safe &amp; Secure Travel</div>
+          <div class="why-desc">Full safety protocols, first-aid trained staff, and 24/7 support during your trip.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🎒</div>
+          <div class="why-title">Custom Itineraries</div>
+          <div class="why-desc">Every trip can be personalized — dates, group size, budget, and interests.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════ -->
+<section id="testimonials">
+  <div class="text-center reveal" style="margin-bottom:52px">
+    <div class="section-tag">✦ Traveler Reviews ✦</div>
+    <h2 class="section-title">What Our Travelers Say</h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="testi-grid">
+
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">
+        The Himalayan Trek was absolutely life-changing. Our guide knew every route
+        perfectly and kept us safe throughout. Highly recommended for first-time trekkers!
+      </p>
+      <div class="testi-author">
+        <div class="testi-avatar av1">A</div>
+        <div>
+          <div class="testi-name">Arjun Mehta</div>
+          <div class="testi-loc">📍Rajasthan</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">
+        Booked the Rajasthan Heritage Tour for my family and it was flawless. Hotels,
+        transport, food — everything was perfectly arranged. Will definitely travel again!
+      </p>
+      <div class="testi-author">
+        <div class="testi-avatar av2">P</div>
+        <div>
+          <div class="testi-name">Priya Sharma</div>
+          <div class="testi-loc">📍Mumbai</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">
+        Did the Char Dham Yatra with a group of 10 seniors. The team handled every
+        challenge smoothly. As a pilgrimage, it was deeply fulfilling. Made it effortless!
+      </p>
+      <div class="testi-author">
+        <div class="testi-avatar av3">S</div>
+        <div>
+          <div class="testi-name">Suresh Patel</div>
+          <div class="testi-loc">📍Delhi</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════ -->
+<section id="contact">
+  <div class="contact-grid">
+
+    <!-- Left: Contact Info -->
+    <div class="reveal">
+      <div class="section-tag">✦ Get In Touch</div>
+      <h2 class="section-title">Plan Your Dream Trip Today</h2>
+      <div class="divider"></div>
+      <p class="section-sub" style="margin-bottom:32px">
+        Have a question or want a custom package? Reach out —
+        Gajendra Singh responds within 2 hours!
+      </p>
+
+      <div class="contact-item">
+        <div class="contact-icon">👤</div>
+        <div>
+          <div class="contact-label">Owner</div>
+          <div class="contact-val">Gajendra Singh</div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="contact-label">Phone / WhatsApp</div>
+          <div class="contact-val">
+            <a href="tel:+919511333174" style="color:inherit">+91 95113 33174</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">✉️</div>
+        <div>
+          <div class="contact-label">Email</div>
+          <!-- TODO: Replace with real email -->
+          <div class="contact-val">bharatdarsanam25@gmail.com</div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="contact-label">Office Location</div>
+          <!-- TODO: Replace with real address -->
+          <div class="contact-val">Ranoli, Sikar, Rajasthan, India</div>
+        </div>
+      </div>
+
+      <a href="https://wa.me/919511333174?text=Hello%20Gajendra!%20I'd%20like%20to%20plan%20a%20trip%20with%20Bharat%20Darsanam."
+         target="_blank" class="wa-btn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5 -.669 -.51 -.173 -.008 -.371 -.01 -.57 -.01 -.198 0 -.52 .074 -.792 .372 -.272 .２９７ -１．０４ １．０１６ -１．０４ ２．４７９ ０ １．４６２ １．０６５ ２．８７５ １．２１３ ３．０７４ .１４９ .１９８ ２．０９６ ３．２ ５．０７７ ４．４８７ .７０９ .３０６ １．２６２ .４８９ １．６９４ .６２５ .７１２ .２２７ １．３６ .１９５ １．８７１ .１１８ .５７１ -.０８５ １．７５８ -.７１９ ２．００６ -１．４１３ .２４８ -.６９４ .２４８ -１．２８９ .₁₇₃ -₁．₄₁₃ -.₀₇₄ -.₁₂₄ -.₂₇₂ -.₁₉₈ -.₅₇ -.₃₄₇m -５．₄₂₁ ７．₄₀³h -." />
+        </svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+
+    <!-- Right: Contact Form -->
+    <div class="reveal">
+      <div class="contact-form">
+        <h3>📋 Send an Inquiry</h3>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Your Full Name *</label>
+              <input type="text" id="fname" placeholder="Roshan Kumawat" required>
+            </div>
+            <div class="form-group">
+              <label for="fphone">Phone Number *</label>
+              <input type="tel" id="fphone" placeholder="+91 XXXXX XXXXX" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="femail">Email Address *</label>
+            <input type="email" id="femail" placeholder="you@gmail.com" required>
+          </div>
+          <div class="form-group">
+            <label for="fpkg">Interested Package *</label>
+            <select id="fpkg" required>
+              <option value="">Select a package...</option>
+              <option>Himalayan Trek Expedition</option>
+              <option>Rajasthan Heritage Tour</option>
+              <option>South India Temple Circuit</option>
+              <option>Char Dham Yatra</option>
+              <option>Valley of Flowers Trek</option>
+              <option>Custom Package</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fmessage">Your Message</label>
+            <textarea id="fmessage" placeholder="Tell us about your travel dates, group size, or any special requirements..."></textarea>
+          </div>
+          <button type="submit" class="submit-btn">🚀 Send Inquiry via WhatsApp</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     PHOTO GALLERY
+════════════════════════════════════════ -->
+<section id="gallery">
+  <div class="text-center reveal" style="margin-bottom:48px">
+    <div class="section-tag">✦ Our Moments ✦</div>
+    <h2 class="section-title">Trip Gallery</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Real photos from our real journeys — every frame tells a story.</p>
+  </div>
+
+  <!-- Filter Buttons -->
+  
+
+  <!-- Gallery Grid -->
+  <!-- 
+    HOW TO ADD YOUR OWN PHOTOS:
+    1. Put your photo in images/ folder
+    2. Change src="images/gallery1.jpg" to your file name
+    3. Change data-category to: himalaya / rajasthan / south / pilgrimage
+    4. Change alt text to describe the photo
+  -->
+  <div class="gallery-grid">
+
+    <div class="gallery-item reveal" data-category="himalaya">
+      <div class="gallery-img" style="background-image:url('images/gallery1.jpg')">
+        <div class="gallery-overlay">
+          <div class="gallery-caption">Himalaya</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal large" data-category="rajasthan">
+      <div class="gallery-img" style="background-image:url('images/gallery2.jpg')">
+        <div class="gallery-overlay">
+          <div class="gallery-caption">Shanti Stupa, Ladakh</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal" data-category="south">
+      <div class="gallery-img" style="background-image:url('images/gallery3.jpg')">
+        <div class="gallery-overlay">
+          <div class="gallery-caption">Ladakh Trail</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal" data-category="pilgrimage">
+      <div class="gallery-img" style="background-image:url('images/gallery4.jpg')">
+        <div class="gallery-overlay">
+          <div class="gallery-caption">Aamer Fort</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal tall" data-category="himalaya">
+      <div class="gallery-img" style="background-image:url('images/gallery5.jpg')">
+        <div class="gallery-overlay">
+          <div class="gallery-caption">Hawa Mahal</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal" data-category="rajasthan">
+      <div class="gallery-img" style="background-image:url('images/gallery6.jpg')">
+        <div class="gallery-overlay">
+          <div class="gallery-caption">Rajasthani Dance</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal" data-category="south">
+      <div class="gallery-img" style="background-image:url('images/gallery7.jpg')">
+        <div class="gallery-overlay">
+          <div class="gallery-caption">Himalaya</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal" data-category="himalaya">
+      <div class="gallery-img" style="background-image:url('images/gallery8.jpg')">
+        <div class="gallery-overlay">
+          <div class="gallery-caption">Udaipur Lake</div>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item reveal" data-category="south">
+      <div class="gallery-img" style="background-image:url('images/gallery9.jpg')">
+        <div class="gallery-overlay">
+          <div class="gallery-caption">Amer Palace, Jaipur</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="gallery-item reveal" data-category="south">
+      <div class="gallery-img" style="background-image:url('images/gallery11.jpg')">
+        <div class="gallery-overlay">
+          <div class="gallery-caption">Himalaya hills</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <button class="lightbox-nav left"  id="lightboxPrev">&#8592;</button>
+    <button class="lightbox-nav right" id="lightboxNext">&#8594;</button>
+    <div class="lightbox-img-wrap">
+      <div class="lightbox-img" id="lightboxImg"></div>
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ════════════════════════════════════════
+     INSTAGRAM SECTION
+════════════════════════════════════════ -->
+<section id="instagram">
+  <div class="insta-inner">
+    <div class="insta-left reveal">
+      <div class="section-tag">✦ Follow Us</div>
+      <h2 class="section-title" style="color:var(--cream)">We Are On Instagram</h2>
+      <div class="divider"></div>
+      <p class="section-sub" style="color:#ccc; max-width:400px">
+        Follow our journey — real trip photos, travel tips, and behind-the-scenes
+        moments from across India. New posts every week!
+      </p>
+      <!-- TODO: Replace bharatdarsanam with real Instagram username -->
+      <a href="https://www.instagram.com/the_bharatdarsanam?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="insta-btn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+        @the_bharatdarsanam
+      </a>
+    </div>
+
+    <!-- Instagram Preview Grid -->
+    <div class="insta-grid reveal">
+  <a href="https://www.instagram.com/the_bharatdarsanam" target="_blank" class="insta-profile-link">
+    <div class="insta-profile-circle">
+      <img src="images/logo.png" alt="Bharat Darsanam" class="insta-profile-img">
+      <div class="insta-profile-hover">
+        <span>View Profile</span>
+      </div>
+    </div>
+    <div class="insta-profile-name">@the_bharatdarsanam</div>
+  </a>
+</div>
+      <
+</section>
+
+
+
+<footer id="footer">
+  <div class="footer-top">
+
+    <div class="footer-brand">
+      <a href="#hero" class="footer-logo-wrap">
+        <img src="images/logo.png" alt="Bharat Darsanam" class="footer-logo-img">
+        <span class="footer-logo-text">Bharat <span>Darsanam</span></span>
+      </a>
+      <p>
+        We are passionate travelers turned travel planners. Our mission is to make
+        India's incredible diversity accessible to every explorer — safely,
+        affordably, and memorably. Led by <strong style="color:#ccc">Gajendra Singh</strong>,
+        we bring heart to every journey.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#packages">Our Packages</a></li>
+        <li><a href="#gallery">Photo Gallery</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <ul>
+        <!-- TODO: Replace bharatdarsanam with real Instagram username -->
+        <li><a href="https://www.instagram.com/the_bharatdarsanam?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">📸 Instagram</a></li>
+        <li><a href="https://wa.me/919511333174" target="_blank">💬 WhatsApp</a></li>
+        <li><a href="tel:+919511333174">📞 Call Us</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2024 <span>Bharat Darsanam</span>. All rights reserved. Made with ❤️ in India.</p>
+    <p>Owner: <span>Gajendra Singh</span> &nbsp;|&nbsp;
+       <a href="tel:+919511333174" style="color:var(--saffron)">+91 95113 33174</a>
+    </p>
+  </div>
+</footer>
+
+<!-- ── Scroll to Top Button ── -->
+<button id="scrollTop" aria-label="Scroll to top">↑</button>
+
+<!-- ── JavaScript ── -->
+<script src="js/main.js"></script>
+</body>
+</html>
