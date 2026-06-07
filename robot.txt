@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rosn8890-crypto.github.io/bharat-darsanam/sitemap.xml
