@@ -331,11 +331,24 @@ section { padding: 90px 5%; }
 
 /* Package card gradients */
 /* Package card photos */
-.pkg-himalaya  .pkg-img-bg { background: url('../images/himalaya.jpg') center/cover no-repeat; }
-.pkg-rajasthan .pkg-img-bg { background: url('../images/rajasthan.jpg') center/cover no-repeat; }
-.pkg-south     .pkg-img-bg { background: url('../images/south-india.jpg') center/cover no-repeat; }
-.pkg-chardham  .pkg-img-bg { background: url('../images/char-dham.jpg') center/cover no-repeat; }
-.pkg-valley    .pkg-img-bg { background: url('../images/valley-flowers.jpg') center/cover no-repeat; }
+.pkg-himalaya    .pkg-img-bg { background: url('../images/himalaya.jpg') center/cover no-repeat; }
+.pkg-rajasthan   .pkg-img-bg { background: url('../images/rajasthan.jpg') center/cover no-repeat; }
+.pkg-south       .pkg-img-bg { background: url('../images/south-india.jpg') center/cover no-repeat; }
+.pkg-chardham    .pkg-img-bg { background: url('../images/char-dham.jpg') center/cover no-repeat; }
+.pkg-valley      .pkg-img-bg { background: url('../images/valley-flowers.jpg') center/cover no-repeat; }
+.pkg-zanskar     .pkg-img-bg { background: url('../images/zanskar.jpg') center/cover no-repeat; background-color: #1a2a3a; }
+.pkg-spiti       .pkg-img-bg { background: url('../images/spiti.jpg') center/cover no-repeat; background-color: #2a1a0a; }
+.pkg-hampta      .pkg-img-bg { background: url('../images/hampta.jpg') center/cover no-repeat; background-color: #0a2a1a; }
+.pkg-kedarkantha .pkg-img-bg { background: url('../images/kedarkantha.jpg') center/cover no-repeat; background-color: #1a1a2a; }
+
+/* Package tagline under name */
+.pkg-tag {
+  font-size: 0.78rem;
+  color: var(--saffron);
+  font-style: italic;
+  margin: -6px 0 8px;
+  line-height: 1.3;
+}
 /* ── ABOUT ── */
 #about { background: var(--cream); }
 .about-grid {
@@ -528,7 +541,16 @@ section { padding: 90px 5%; }
   appearance: none;
 }
 .form-group input:focus,
-.form-group select:focus,
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23e8660a' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
 .form-group textarea:focus { border-color: var(--saffron); }
 .form-group textarea { resize: vertical; min-height: 100px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -868,6 +890,29 @@ section { padding: 90px 5%; }
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 220px;
   gap: 12px;
+}
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .gallery-item.large,
+  .gallery-item.tall {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .gallery-item.large,
+  .gallery-item.tall {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
 }
 .gallery-item { border-radius: var(--radius-md); overflow: hidden; cursor: pointer; }
 .gallery-item.large { grid-column: span 2; }
@@ -1443,4 +1488,10 @@ section { padding: 90px 5%; }
   color: rgba(255,255,255,0.85);
   font-size: 1rem;
   font-weight: 600;
+}
+.pkg-price {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--saffron);
+  letter-spacing: 0.5px;
 }
