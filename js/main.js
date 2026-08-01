@@ -301,12 +301,12 @@ document.addEventListener('keydown', (e) => {
 // Sequence:
 // 0.3s  → "Welcome to Bharat Darsanam" fades in
 // 1.2s  → Logo bounces in
-// 2.0s  → Typing starts: "Journeys to India's Soul" letter by letter
+// 2.0s  → Typing starts: "Journey to India's Soul" letter by letter
 // ~4.4s → Typing complete + loader fills
 // 5.2s  → Splash hides
 const splash       = document.getElementById('splash');
 const taglineEl    = document.getElementById('splashTagline');
-const taglineText  = "Journeys to India's Soul";
+const taglineText  = "Journey to India's Soul";
 
 function typeSplashTagline() {
   if (!taglineEl) return;
